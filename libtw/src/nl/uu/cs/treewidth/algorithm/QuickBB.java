@@ -183,8 +183,8 @@ public class QuickBB< D extends InputData > implements UpperBound<D>, Permutatio
 		
 		if( s.f< upperbound)
 			BB(s);
-		else
-			System.out.println("*** No branching; treewidth found by UB en LB ***");
+//		else
+//			System.out.println("*** No branching; treewidth found by UB en LB ***");
 		
 		//Information about the memorization.
 		//System.out.println("# created bitsets: "+sets.size());
@@ -203,7 +203,7 @@ public class QuickBB< D extends InputData > implements UpperBound<D>, Permutatio
 		if(graph.getNumberOfVertices()==0) {
 			if(upperbound >= s.f) {
 				upperbound = s.f;
-				System.out.println("Setting upperbound to "+upperbound+" (no vertices left in graph)");
+//				System.out.println("Setting upperbound to "+upperbound+" (no vertices left in graph)");
 			}
 		} else if(graph.getNumberOfVertices() < 2) {
 			if(upperbound >= s.f) {
@@ -211,7 +211,7 @@ public class QuickBB< D extends InputData > implements UpperBound<D>, Permutatio
 				NVertexOrder<QuickBBData> permcopy = new NVertexOrder<QuickBBData>( s.perm );
 				permcopy.order.add( graph.getVertex(0) );
 				permutation = permcopy;
-				System.out.println("Setting upperbound to "+upperbound);
+//				System.out.println("Setting upperbound to "+upperbound);
 			}			
 		} else {
 			for(int i=0; i<graph.getNumberOfVertices();++i) {			

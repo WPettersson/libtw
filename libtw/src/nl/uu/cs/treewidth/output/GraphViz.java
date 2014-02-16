@@ -33,7 +33,7 @@ public class GraphViz {
 	
 	public static BufferedImage render( String dotSource ) {
 		
-		System.out.print(".");
+//		System.out.print(".");
 		
 		BufferedImage image = null;
 		
