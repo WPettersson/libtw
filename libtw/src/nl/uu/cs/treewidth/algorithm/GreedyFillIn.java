@@ -77,7 +77,7 @@ public class GreedyFillIn<D extends InputData> implements Permutation<D>, UpperB
 	}
 	
 	public NVertexOrder<D> getPermutation() {
-		return permutation;
+		return new NVertexOrder<D>(permutation);
 	}
 
 	public String getName() {
